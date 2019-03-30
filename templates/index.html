@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<div class="jumbotron text-center">
+		<h1> Welcome To MyDWDMProject</h1>
+		<p class="lead">the quick brown fox jumped over the lazy dog</p>
+	</div>
+	<form action="/result" method="POST">
+		<div class="col-xs-20 text-center">
+      		<input name="text" class="form-control input-lg" type="text" aria-label="Search">
+      		<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      	</div>
+    </form>
+    <div class="text-center">
+    	{% if init==0 %}
+    		{% for key, value in prediction.items() %}
+    			<h3>{{key}}		<meter max="10" value={{value}}></meter></h3>
+    		{% endfor %} 
+    	{% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyDWDMProject</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style type="text/css">
+		meter::-webkit-meter-bar {
+	  		background: none;
+	  		background-color: rgba(0, 0, 0, 0.1);
+		}
+		meter::-webkit-meter-optimum-value {
+    		background: red; /* Green */
+		}
+	</style>
+</head>
+<body>
+	{% include 'includes/_navbar.html' %}
+	<div class="container">
+		{% block body %}{% endblock %}	
+	</div>
+	
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+</body>
+</html>
